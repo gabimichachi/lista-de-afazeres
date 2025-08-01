@@ -1,12 +1,15 @@
-lista_de_tarefas=[]
+from classe_tarefa import Tarefa
+
+tarefas = Tarefa()
 
 print('''------------------' 
     '|  LISTA DE AFAZERES |' 
     '----------------------' 
-    '1- inserir tarefas' 
-    '2- listar tarefa' 
-    '3- marcar como concluido ' 
-    '4- remover tarefa ' 
+    '1- inserir tarefas'   |
+    '2- listar tarefa'     |
+    '3- marcar como concluido ' |
+    '4- remover tarefa |
+    '0- sair |
     '--------------------------''')
 
 
@@ -15,9 +18,7 @@ while True:
     tarefa = int(input("informe o número da tarefa que você deseja realizar: "))
 
     if tarefa == 1:
-        print("você vai inserir a tarefa.")
-        lista_de_tarefas.append(tarefa)
-
+        tarefas.adicionar_tarefa()
     elif tarefa == 2:
         print("você vai listar a tarefa.")
 
